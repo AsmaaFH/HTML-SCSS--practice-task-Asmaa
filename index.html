@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML-SCSS- practice-task-Asmaa</title>
+    <link rel="stylesheet" href="dist/bootsrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="dist/normalize.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <nav id="navbar" class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><img src="images/logo.svg" /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="d-flex gap-3 align-items-center ms-auto">
+              <div class="notifications">
+                <button type="button" class="btn position-relative p-0">
+                  <img src="images/bell.png" />
+                  <span class="position-absolute translate-middle badge bg-danger">
+                    3
+                    <span class="visually-hidden">unread messages</span>
+                  </span>
+                </button>
+              </div>
+
+              <div class="profile">
+                <div class="dropdown">
+                  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <span class="me-2"><img src="images/avatar.png" alt="" /></span>
+                  </button>
+                  <!-- <ul class="dropdown-menu">
+                  </ul> -->
+                </div>
+              </div>
+
+              <div class="menu">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <div class="main-wrapper">
+        <div class="tasks">
+          <div class="container-fluid">
+            <ul class="nav nav-tabs" id="tasksTabs" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link active"
+                  id="tasks-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#tasks"
+                  type="button"
+                  role="tab"
+                  aria-controls="tasks"
+                  aria-selected="true"
+                >
+                  Tasks
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="schedules-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#schedules"
+                  type="button"
+                  role="tab"
+                  aria-controls="schedules"
+                  aria-selected="false"
+                >
+                  Schedules
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link border-right-0"
+                  id="failed-subtasks-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#failed-subtasks"
+                  type="button"
+                  role="tab"
+                  aria-controls="failed-subtasks"
+                  aria-selected="false"
+                >
+                  Failed SubTasks
+                </button>
+              </li>
+              <span class="triangle"></span>
+
+            </ul>
+
+            <div class="tab-content" id="tasksTabsContent">
+              <div class="tab-pane fade show active" id="tasks" role="tabpanel" aria-labelledby="tasks-tab">
+                <div class="task-card runnging">
+                  <div class="task-info">
+                    <div>
+                      <strong>Name</strong>
+                      <div>Main Data Ethiopia</div>
+                    </div>
+                    <div class="text-muted">#TSK_216894891</div>
+                  </div>
+
+                  <div class="task-status">
+                    <img src="images/refresh-icon.png" />
+                    <div class="text">
+                      <span>status</span>
+                      <span class="status">Running</span>
+                    </div>
+                  </div>
+
+                  <div class="task-date">
+                    <img src="images/date-icon.png" />
+                    <div class="text">
+                      <span>Creation Date</span>
+                      <div class="date">2023-03-15 15:55:17</div>
+                    </div>
+                  </div>
+
+                  <div class="task-criteria">
+                    <strong>Selection Criteria</strong>
+                    <div class="form-group">
+                      <input type="checkbox" id="elecCompGhana" />
+
+                      <label for="elecCompGhana">Electricity Company of Ghana</label>
+                    </div>
+
+                    <div class="form-group">
+                      <input type="checkbox" id="demoReg1" />
+
+                      <label for="demoReg1">Demo Region 1</label>
+                    </div>
+
+                    <div class="form-group">
+                      <input type="checkbox" id="demoDis1" />
+
+                      <label for="demoDis1">Demo District 1</label>
+                    </div>
+                  </div>
+
+                  <div class="task-operations">
+                    <strong>Operations</strong>
+                    <div class="form-group">
+                      <input type="checkbox" id="opProfile" />
+                      <label for="opProfile">Load Meter Profile</label>
+                    </div>
+                    <div class="form-group">
+                      <input type="checkbox" id="opCommission" />
+                      <label for="opCommission">Load Meter Profile</label>
+                    </div>
+                    <a href="#">... view more</a>
+                  </div>
+
+                  <div class="task-progress">
+
+                    <div class="bars">
+                      <strong>Tsk (210)</strong>
+
+                      <div class="progress">
+                        <div
+                          class="progress-bar"
+                          role="progressbar"
+                          style="width: 57%"
+                          aria-valuenow="75"
+                          aria-valuemin="0"
+                          aria-valuemax="210"
+                        >
+                          120
+                        </div>
+                      </div>
+
+                      <div class="progress">
+                        <div
+                          class="progress-bar"
+                          role="progressbar"
+                          style="width: 33%"
+                          aria-valuenow="50"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                        >
+                          70
+                        </div>
+                      </div>
+
+                      <div class="progress">
+                        <div
+                          class="progress-bar"
+                          role="progressbar"
+                          style="width: 10%"
+                          aria-valuenow="25"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                        >
+                          20
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="action">
+                      <span class="badge-scheduled">Scheduled</span>
+                      <img src="images/arrow-right.png" />
+                    </div>
+                  </div>
+                </div>
+                <div class="task-card complete">
+                  <div class="task-info">
+                    <div>
+                      <strong>Name</strong>
+                      <div>Main Data Ethiopia</div>
+                    </div>
+                    <div class="text-muted">#TSK_216894891</div>
+                  </div>
+
+                  <div class="task-status">
+                    <img src="images/check-icon.png" />
+                    <div class="text">
+                      <span>status</span>
+                      <span class="status">Finished</span>
+                    </div>
+                  </div>
+
+                  <div class="task-date">
+                    <img src="images/date-icon.png" />
+                    <div class="text">
+                      <span>Creation Date</span>
+                      <div class="date">2023-03-15 15:55:17</div>
+                    </div>
+                  </div>
+
+                  <div class="task-criteria">
+                    <strong>Selection Criteria</strong>
+                    <div class="form-group">
+                      <input type="checkbox" id="elecCompGhana" />
+
+                      <label for="elecCompGhana">Electricity Company of Ghana</label>
+                    </div>
+
+                    <div class="form-group">
+                      <input type="checkbox" id="demoReg1" />
+
+                      <label for="demoReg1">Demo Region 1</label>
+                    </div>
+
+                    <div class="form-group">
+                      <input type="checkbox" id="demoDis1" />
+
+                      <label for="demoDis1">Demo District 1</label>
+                    </div>
+                  </div>
+
+                  <div class="task-operations">
+                    <strong>Operations</strong>
+                    <div class="form-group">
+                      <input type="checkbox" id="opProfile" />
+                      <label for="opProfile">Load Meter Profile</label>
+                    </div>
+                    <div class="form-group">
+                      <input type="checkbox" id="opCommission" />
+                      <label for="opCommission">Load Meter Profile</label>
+                    </div>
+                    <a href="#">... view more</a>
+                  </div>
+
+                  <div class="task-progress">
+
+                    <div class="bars">
+                      <strong>Tsk (210)</strong>
+
+                      <div class="progress">
+                        <div
+                          class="progress-bar"
+                          role="progressbar"
+                          style="width: 57%"
+                          aria-valuenow="75"
+                          aria-valuemin="0"
+                          aria-valuemax="210"
+                        >
+                          120
+                        </div>
+                      </div>
+
+                      <div class="progress">
+                        <div
+                          class="progress-bar"
+                          role="progressbar"
+                          style="width: 33%"
+                          aria-valuenow="50"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                        >
+                          70
+                        </div>
+                      </div>
+
+                      <div class="progress">
+                        <div
+                          class="progress-bar"
+                          role="progressbar"
+                          style="width: 10%"
+                          aria-valuenow="25"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                        >
+                          20
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="action">
+                      <span class="badge-scheduled">Scheduled</span>
+                      <img src="images/arrow-right.png" />
+                    </div>
+                  </div>
+                </div>
+                <div class="task-card queued">
+                  <div class="task-info">
+                    <div>
+                      <strong>Name</strong>
+                      <div>Main Data Ethiopia</div>
+                    </div>
+                    <div class="text-muted">#TSK_216894891</div>
+                  </div>
+
+                  <div class="task-status">
+                    <img src="images/refresh-icon.png" />
+                    <div class="text">
+                      <span>status</span>
+                      <span class="status">Queued</span>
+                    </div>
+                  </div>
+
+                  <div class="task-date">
+                    <img src="images/date-icon.png" />
+                    <div class="text">
+                      <span>Creation Date</span>
+                      <div class="date">2023-03-15 15:55:17</div>
+                    </div>
+                  </div>
+
+                  <div class="task-criteria">
+                    <strong>Selection Criteria</strong>
+                    <div class="form-group">
+                      <input type="checkbox" id="elecCompGhana" />
+
+                      <label for="elecCompGhana">Electricity Company of Ghana</label>
+                    </div>
+
+                    <div class="form-group">
+                      <input type="checkbox" id="demoReg1" />
+
+                      <label for="demoReg1">Demo Region 1</label>
+                    </div>
+
+                    <div class="form-group">
+                      <input type="checkbox" id="demoDis1" />
+
+                      <label for="demoDis1">Demo District 1</label>
+                    </div>
+                  </div>
+
+                  <div class="task-operations">
+                    <strong>Operations</strong>
+                    <div class="form-group">
+                      <input type="checkbox" id="opProfile" />
+                      <label for="opProfile">Load Meter Profile</label>
+                    </div>
+                    <div class="form-group">
+                      <input type="checkbox" id="opCommission" />
+                      <label for="opCommission">Load Meter Profile</label>
+                    </div>
+                    <a href="#">... view more</a>
+                  </div>
+
+                  <div class="task-progress">
+
+                    <div class="bars">
+                      <strong>Tsk (210)</strong>
+
+                      <div class="progress">
+                        <div
+                          class="progress-bar"
+                          role="progressbar"
+                          style="width: 57%"
+                          aria-valuenow="75"
+                          aria-valuemin="0"
+                          aria-valuemax="210"
+                        >
+                          120
+                        </div>
+                      </div>
+
+                      <div class="progress">
+                        <div
+                          class="progress-bar"
+                          role="progressbar"
+                          style="width: 33%"
+                          aria-valuenow="50"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                        >
+                          70
+                        </div>
+                      </div>
+
+                      <div class="progress">
+                        <div
+                          class="progress-bar"
+                          role="progressbar"
+                          style="width: 10%"
+                          aria-valuenow="25"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                        >
+                          20
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="action">
+                      <span class="badge-scheduled">Scheduled</span>
+                      <img src="images/arrow-right.png" />
+                    </div>
+                  </div>
+                </div>
+                <div class="task-card new">
+                  <div class="task-info">
+                    <div>
+                      <strong>Name</strong>
+                      <div>Main Data Ethiopia</div>
+                    </div>
+                    <div class="text-muted">#TSK_216894891</div>
+                  </div>
+
+                  <div class="task-status">
+                    <img src="images/new-task-icon.png" />
+                    <div class="text">
+                      <span>status</span>
+                      <span class="status">New</span>
+                    </div>
+                  </div>
+
+                  <div class="task-date">
+                    <img src="images/date-icon.png" />
+                    <div class="text">
+                      <span>Creation Date</span>
+                      <div class="date">2023-03-15 15:55:17</div>
+                    </div>
+                  </div>
+
+                  <div class="task-criteria">
+                    <strong>Selection Criteria</strong>
+                    <div class="form-group">
+                      <input type="checkbox" id="elecCompGhana" />
+
+                      <label for="elecCompGhana">Electricity Company of Ghana</label>
+                    </div>
+
+                    <div class="form-group">
+                      <input type="checkbox" id="demoReg1" />
+
+                      <label for="demoReg1">Demo Region 1</label>
+                    </div>
+
+                    <div class="form-group">
+                      <input type="checkbox" id="demoDis1" />
+
+                      <label for="demoDis1">Demo District 1</label>
+                    </div>
+                  </div>
+
+                  <div class="task-operations">
+                    <strong>Operations</strong>
+                    <div class="form-group">
+                      <input type="checkbox" id="opProfile" />
+                      <label for="opProfile">Load Meter Profile</label>
+                    </div>
+                    <div class="form-group">
+                      <input type="checkbox" id="opCommission" />
+                      <label for="opCommission">Load Meter Profile</label>
+                    </div>
+                    <a href="#">... view more</a>
+                  </div>
+
+                  <div class="task-progress">
+
+                    <div class="bars">
+                      <strong>Tsk (210)</strong>
+
+                      <div class="progress">
+                        <div
+                          class="progress-bar"
+                          role="progressbar"
+                          style="width: 57%"
+                          aria-valuenow="75"
+                          aria-valuemin="0"
+                          aria-valuemax="210"
+                        >
+                          120
+                        </div>
+                      </div>
+
+                      <div class="progress">
+                        <div
+                          class="progress-bar"
+                          role="progressbar"
+                          style="width: 33%"
+                          aria-valuenow="50"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                        >
+                          70
+                        </div>
+                      </div>
+
+                      <div class="progress">
+                        <div
+                          class="progress-bar"
+                          role="progressbar"
+                          style="width: 10%"
+                          aria-valuenow="25"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                        >
+                          20
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="action">
+                      <span class="badge-scheduled">Scheduled</span>
+                      <img src="images/arrow-right.png" />
+                    </div>
+                  </div>
+                </div>
+                <div class="task-card new">
+                  <div class="task-info">
+                    <div>
+                      <strong>Name</strong>
+                      <div>Main Data Ethiopia</div>
+                    </div>
+                    <div class="text-muted">#TSK_216894891</div>
+                  </div>
+
+                  <div class="task-status">
+                    <img src="images/new-task-icon.png" />
+                    <div class="text">
+                      <span>status</span>
+                      <span class="status">New</span>
+                    </div>
+                  </div>
+
+                  <div class="task-date">
+                    <img src="images/date-icon.png" />
+                    <div class="text">
+                      <span>Creation Date</span>
+                      <div class="date">2023-03-15 15:55:17</div>
+                    </div>
+                  </div>
+
+                  <div class="task-criteria">
+                    <strong>Selection Criteria</strong>
+                    <div class="form-group">
+                      <input type="checkbox" id="elecCompGhana" />
+
+                      <label for="elecCompGhana">Electricity Company of Ghana</label>
+                    </div>
+
+                    <div class="form-group">
+                      <input type="checkbox" id="demoReg1" />
+
+                      <label for="demoReg1">Demo Region 1</label>
+                    </div>
+
+                    <div class="form-group">
+                      <input type="checkbox" id="demoDis1" />
+
+                      <label for="demoDis1">Demo District 1</label>
+                    </div>
+                  </div>
+
+                  <div class="task-operations">
+                    <strong>Operations</strong>
+                    <div class="form-group">
+                      <input type="checkbox" id="opProfile" />
+                      <label for="opProfile">Load Meter Profile</label>
+                    </div>
+                    <div class="form-group">
+                      <input type="checkbox" id="opCommission" />
+                      <label for="opCommission">Load Meter Profile</label>
+                    </div>
+                    <a href="#">... view more</a>
+                  </div>
+
+                  <div class="task-progress">
+
+                    <div class="bars">
+                      <strong>Tsk (210)</strong>
+
+                      <div class="progress">
+                        <div
+                          class="progress-bar"
+                          role="progressbar"
+                          style="width: 57%"
+                          aria-valuenow="75"
+                          aria-valuemin="0"
+                          aria-valuemax="210"
+                        >
+                          120
+                        </div>
+                      </div>
+
+                      <div class="progress">
+                        <div
+                          class="progress-bar"
+                          role="progressbar"
+                          style="width: 33%"
+                          aria-valuenow="50"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                        >
+                          70
+                        </div>
+                      </div>
+
+                      <div class="progress">
+                        <div
+                          class="progress-bar"
+                          role="progressbar"
+                          style="width: 10%"
+                          aria-valuenow="25"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                        >
+                          20
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="action">
+                      <span class="badge-scheduled">Scheduled</span>
+                      <img src="images/arrow-right.png" />
+                    </div>
+                  </div>
+                </div>
+                <div class="task-card new">
+                  <div class="task-info">
+                    <div>
+                      <strong>Name</strong>
+                      <div>Main Data Ethiopia</div>
+                    </div>
+                    <div class="text-muted">#TSK_216894891</div>
+                  </div>
+
+                  <div class="task-status">
+                    <img src="images/new-task-icon.png" />
+                    <div class="text">
+                      <span>status</span>
+                      <span class="status">New</span>
+                    </div>
+                  </div>
+
+                  <div class="task-date">
+                    <img src="images/date-icon.png" />
+                    <div class="text">
+                      <span>Creation Date</span>
+                      <div class="date">2023-03-15 15:55:17</div>
+                    </div>
+                  </div>
+
+                  <div class="task-criteria">
+                    <strong>Selection Criteria</strong>
+                    <div class="form-group">
+                      <input type="checkbox" id="elecCompGhana" />
+
+                      <label for="elecCompGhana">Electricity Company of Ghana</label>
+                    </div>
+
+                    <div class="form-group">
+                      <input type="checkbox" id="demoReg1" />
+
+                      <label for="demoReg1">Demo Region 1</label>
+                    </div>
+
+                    <div class="form-group">
+                      <input type="checkbox" id="demoDis1" />
+
+                      <label for="demoDis1">Demo District 1</label>
+                    </div>
+                  </div>
+
+                  <div class="task-operations">
+                    <strong>Operations</strong>
+                    <div class="form-group">
+                      <input type="checkbox" id="opProfile" />
+                      <label for="opProfile">Load Meter Profile</label>
+                    </div>
+                    <div class="form-group">
+                      <input type="checkbox" id="opCommission" />
+                      <label for="opCommission">Load Meter Profile</label>
+                    </div>
+                    <a href="#">... view more</a>
+                  </div>
+
+                  <div class="task-progress">
+
+                    <div class="bars">
+                      <strong>Tsk (210)</strong>
+
+                      <div class="progress">
+                        <div
+                          class="progress-bar"
+                          role="progressbar"
+                          style="width: 57%"
+                          aria-valuenow="75"
+                          aria-valuemin="0"
+                          aria-valuemax="210"
+                        >
+                          120
+                        </div>
+                      </div>
+
+                      <div class="progress">
+                        <div
+                          class="progress-bar"
+                          role="progressbar"
+                          style="width: 33%"
+                          aria-valuenow="50"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                        >
+                          70
+                        </div>
+                      </div>
+
+                      <div class="progress">
+                        <div
+                          class="progress-bar"
+                          role="progressbar"
+                          style="width: 10%"
+                          aria-valuenow="25"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                        >
+                          20
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="action">
+                      <span class="badge-scheduled">Scheduled</span>
+                      <img src="images/arrow-right.png" />
+                    </div>
+                  </div>
+                </div>
+                <div class="task-card new">
+                  <div class="task-info">
+                    <div>
+                      <strong>Name</strong>
+                      <div>Main Data Ethiopia</div>
+                    </div>
+                    <div class="text-muted">#TSK_216894891</div>
+                  </div>
+
+                  <div class="task-status">
+                    <img src="images/new-task-icon.png" />
+                    <div class="text">
+                      <span>status</span>
+                      <span class="status">New</span>
+                    </div>
+                  </div>
+
+                  <div class="task-date">
+                    <img src="images/date-icon.png" />
+                    <div class="text">
+                      <span>Creation Date</span>
+                      <div class="date">2023-03-15 15:55:17</div>
+                    </div>
+                  </div>
+
+                  <div class="task-criteria">
+                    <strong>Selection Criteria</strong>
+                    <div class="form-group">
+                      <input type="checkbox" id="elecCompGhana" />
+
+                      <label for="elecCompGhana">Electricity Company of Ghana</label>
+                    </div>
+
+                    <div class="form-group">
+                      <input type="checkbox" id="demoReg1" />
+
+                      <label for="demoReg1">Demo Region 1</label>
+                    </div>
+
+                    <div class="form-group">
+                      <input type="checkbox" id="demoDis1" />
+
+                      <label for="demoDis1">Demo District 1</label>
+                    </div>
+                  </div>
+
+                  <div class="task-operations">
+                    <strong>Operations</strong>
+                    <div class="form-group">
+                      <input type="checkbox" id="opProfile" />
+                      <label for="opProfile">Load Meter Profile</label>
+                    </div>
+                    <div class="form-group">
+                      <input type="checkbox" id="opCommission" />
+                      <label for="opCommission">Load Meter Profile</label>
+                    </div>
+                    <a href="#">... view more</a>
+                  </div>
+
+                  <div class="task-progress">
+
+                    <div class="bars">
+                      <strong>Tsk (210)</strong>
+
+                      <div class="progress">
+                        <div
+                          class="progress-bar"
+                          role="progressbar"
+                          style="width: 57%"
+                          aria-valuenow="75"
+                          aria-valuemin="0"
+                          aria-valuemax="210"
+                        >
+                          120
+                        </div>
+                      </div>
+
+                      <div class="progress">
+                        <div
+                          class="progress-bar"
+                          role="progressbar"
+                          style="width: 33%"
+                          aria-valuenow="50"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                        >
+                          70
+                        </div>
+                      </div>
+
+                      <div class="progress">
+                        <div
+                          class="progress-bar"
+                          role="progressbar"
+                          style="width: 10%"
+                          aria-valuenow="25"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                        >
+                          20
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="action">
+                      <span class="badge-scheduled">Scheduled</span>
+                      <img src="images/arrow-right.png" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="schedules" role="tabpanel" aria-labelledby="schedules-tab">
+                <p>Schedules</p>
+              </div>
+              <div class="tab-pane fade" id="failed-subtasks" role="tabpanel" aria-labelledby="failed-subtasks-tab">
+                <p>Failed</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <div class="container text-center">
+          <span>Powered By <img src="images/footer-logo.png" alt="Logo" class="footer-logo"> ELSewedy Electrometer</span>
+        </div>
+      </footer>
+    </div>
+    <script src="dist/bootsrap/bootsratp.min.js"></script>
+  </body>
+</html>
