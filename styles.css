@@ -36,6 +36,41 @@ nav.navbar .menu span {
 .tasks {
   margin-top: 36px;
 }
+.tasks .nav-tabs-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+.tasks .nav-tabs-links .actions {
+  margin-bottom: -1px;
+}
+@media (max-width: 1200px) {
+  .tasks .nav-tabs-links .actions {
+    align-self: flex-end;
+  }
+}
+.tasks .nav-tabs-links .actions .filter {
+  padding: 3px;
+}
+.tasks .nav-tabs-links .actions .add {
+  font-size: 23px;
+  border: 1px solid #707070;
+  background-color: #00afd8;
+  color: #fff;
+  border-radius: 0;
+  padding: 0px 9px;
+  line-height: 27px;
+}
+.tasks .nav-tabs-links .actions img {
+  width: 18px;
+  height: auto;
+}
+@media (max-width: 1200px) {
+  .tasks .nav-tabs-links {
+    flex-direction: column;
+    align-items: start;
+  }
+}
 .tasks .nav-tabs .nav-link {
   font-size: 18px;
   color: #fff;
@@ -43,17 +78,27 @@ nav.navbar .menu span {
   font-weight: bold;
   border-radius: 0;
   border-right: 1px solid #ababab;
-  padding-right: 60px;
+  padding: 6px 18px;
+  padding-right: 90px;
 }
 .tasks .nav-tabs .nav-link.border-right-0 {
   border-right: none;
+  padding-right: 70px;
 }
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   .tasks .nav-tabs .nav-link {
     padding-right: 0px;
   }
 }
-@media (max-width: 768px) {
+.tasks .nav-tabs .nav-link:not(:last-child) {
+  padding-right: 90px;
+}
+@media (max-width: 1200px) {
+  .tasks .nav-tabs {
+    margin-bottom: 16px;
+  }
+}
+@media (max-width: 1200px) {
   .tasks .nav-tabs .nav-link {
     width: 100%;
   }
@@ -63,10 +108,11 @@ nav.navbar .menu span {
   border-color: #00afd8;
   color: #fff;
 }
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   .tasks .nav-tabs {
     flex-direction: column;
     gap: 3px;
+    width: 100%;
   }
 }
 .tasks .tab-pane {
@@ -86,8 +132,6 @@ nav.navbar .menu span {
   display: flex;
   align-items: center;
   position: relative;
-  min-width: 1200px;
-  overflow-x: scroll;
 }
 .tasks .task-card.runnging {
   background-color: #e5f4ff;
@@ -122,6 +166,13 @@ nav.navbar .menu span {
   left: 0;
   background-color: #00afd8;
 }
+@media (max-width: 1200px) {
+  .tasks .task-card {
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+  }
+}
 .tasks .task-info,
 .tasks .task-status,
 .tasks .task-date,
@@ -149,6 +200,16 @@ nav.navbar .menu span {
   left: 0;
   top: 50%;
   transform: translateY(-50%);
+}
+@media (max-width: 1200px) {
+  .tasks .task-info:not(:first-child)::before,
+  .tasks .task-status:not(:first-child)::before,
+  .tasks .task-date:not(:first-child)::before,
+  .tasks .task-criteria:not(:first-child)::before,
+  .tasks .task-operations:not(:first-child)::before,
+  .tasks .task-progress:not(:first-child)::before {
+    display: none;
+  }
 }
 .tasks .task-info strong,
 .tasks .task-status strong,
@@ -264,6 +325,13 @@ nav.navbar .menu span {
 .tasks .task-progress .progress:nth-of-type(3) .progress-bar {
   background-color: #f57277;
 }
+@media (max-width: 1200px) {
+  .tasks .task-progress {
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+  }
+}
 .tasks .progress-bar {
   width: 50px;
   height: 10px;
@@ -289,8 +357,14 @@ nav.navbar .menu span {
 
 .triangle {
   border-color: transparent transparent #cbcbcb transparent;
-  border-width: 0px 81px 38px 0px;
+  border-width: 0px 73px 34px 0px;
   border-style: solid;
+  margin-bottom: -1px;
+}
+@media (max-width: 1200px) {
+  .triangle {
+    display: none;
+  }
 }
 
 footer {
@@ -313,6 +387,14 @@ footer img {
   font-size: 10px;
   color: #00afd8;
   font-weight: bold;
+  border-color: #c1c1c1;
+  padding: 4px 7px;
+}
+.pagination .page-item:first-child .page-link {
+  border-radius: 0;
+}
+.pagination .page-item:last-child .page-link {
+  border-radius: 0;
 }
 .pagination .page-item.active .page-link {
   background-color: #00afd8;
