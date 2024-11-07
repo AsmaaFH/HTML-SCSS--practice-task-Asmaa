@@ -44,7 +44,7 @@ nav.navbar .menu span {
 .tasks .nav-tabs-links .actions {
   margin-bottom: -1px;
 }
-@media (max-width: 1200px) {
+@media (max-width: 768px) {
   .tasks .nav-tabs-links .actions {
     align-self: flex-end;
   }
@@ -65,7 +65,7 @@ nav.navbar .menu span {
   width: 18px;
   height: auto;
 }
-@media (max-width: 1200px) {
+@media (max-width: 768px) {
   .tasks .nav-tabs-links {
     flex-direction: column;
     align-items: start;
@@ -85,7 +85,12 @@ nav.navbar .menu span {
   border-right: none;
   padding-right: 70px;
 }
-@media (max-width: 1200px) {
+@media (max-width: 768px) {
+  .tasks .nav-tabs .nav-link.border-right-0 {
+    padding-right: 0px;
+  }
+}
+@media (max-width: 768px) {
   .tasks .nav-tabs .nav-link {
     padding-right: 0px;
   }
@@ -93,12 +98,12 @@ nav.navbar .menu span {
 .tasks .nav-tabs .nav-link:not(:last-child) {
   padding-right: 90px;
 }
-@media (max-width: 1200px) {
+@media (max-width: 768px) {
   .tasks .nav-tabs {
     margin-bottom: 16px;
   }
 }
-@media (max-width: 1200px) {
+@media (max-width: 768px) {
   .tasks .nav-tabs .nav-link {
     width: 100%;
   }
@@ -108,7 +113,7 @@ nav.navbar .menu span {
   border-color: #00afd8;
   color: #fff;
 }
-@media (max-width: 1200px) {
+@media (max-width: 768px) {
   .tasks .nav-tabs {
     flex-direction: column;
     gap: 3px;
@@ -131,6 +136,7 @@ nav.navbar .menu span {
   margin-bottom: 10px;
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   position: relative;
 }
 .tasks .task-card.runnging {
@@ -166,11 +172,20 @@ nav.navbar .menu span {
   left: 0;
   background-color: #00afd8;
 }
+@media (max-width: 576px) {
+  .tasks .task-card::before {
+    height: 19px;
+    width: 100%;
+  }
+}
 @media (max-width: 1200px) {
   .tasks .task-card {
-    flex-direction: column;
-    align-items: start;
-    gap: 20px;
+    gap: 10px;
+  }
+}
+@media (max-width: 576px) {
+  .tasks .task-card {
+    padding-top: 30px;
   }
 }
 .tasks .task-info,
@@ -185,6 +200,7 @@ nav.navbar .menu span {
   color: #000;
   flex: 1;
   position: relative;
+  min-width: 200px;
 }
 .tasks .task-info:not(:first-child)::before,
 .tasks .task-status:not(:first-child)::before,
@@ -221,10 +237,26 @@ nav.navbar .menu span {
   line-height: 14px;
   color: #aaaaaa;
 }
+@media (max-width: 576px) {
+  .tasks .task-info,
+  .tasks .task-status,
+  .tasks .task-date,
+  .tasks .task-criteria,
+  .tasks .task-operations,
+  .tasks .task-progress {
+    padding: 0;
+  }
+}
 .tasks .task-info {
   display: flex;
   flex-direction: column;
   font-size: 16px;
+}
+.tasks .task-info .task-name {
+  width: 165px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .tasks .task-info .text-muted {
   font-size: 10px;
@@ -278,14 +310,21 @@ nav.navbar .menu span {
 .tasks .task-criteria,
 .tasks .task-operations {
   color: #000;
-  display: flex;
-  flex-direction: column;
 }
-.tasks .task-criteria .form-group,
-.tasks .task-operations .form-group {
-  display: flex;
-  align-items: center;
-  gap: 3px;
+.tasks .task-criteria li,
+.tasks .task-operations li {
+  position: relative;
+  padding-left: 15px;
+}
+.tasks .task-criteria li::before,
+.tasks .task-operations li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 12px;
+  height: 12px;
+  background-color: #c5c5c5;
 }
 .tasks .task-criteria a,
 .tasks .task-operations a {
@@ -293,6 +332,7 @@ nav.navbar .menu span {
 }
 .tasks .task-progress {
   display: flex;
+  flex-wrap: wrap;
   gap: 35px;
   font-size: 10px;
 }
@@ -325,13 +365,6 @@ nav.navbar .menu span {
 .tasks .task-progress .progress:nth-of-type(3) .progress-bar {
   background-color: #f57277;
 }
-@media (max-width: 1200px) {
-  .tasks .task-progress {
-    flex-direction: column;
-    align-items: start;
-    gap: 20px;
-  }
-}
 .tasks .progress-bar {
   width: 50px;
   height: 10px;
@@ -361,7 +394,7 @@ nav.navbar .menu span {
   border-style: solid;
   margin-bottom: -1px;
 }
-@media (max-width: 1200px) {
+@media (max-width: 768px) {
   .triangle {
     display: none;
   }

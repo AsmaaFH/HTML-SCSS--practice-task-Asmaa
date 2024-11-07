@@ -43,35 +43,34 @@ nav.navbar {
   }
 }
 .tasks {
-
   margin-top: 36px;
-  .nav-tabs-links{
+  .nav-tabs-links {
     display: flex;
     justify-content: space-between;
     align-items: end;
-    .actions{
+    .actions {
       margin-bottom: -1px;
-      @media (max-width: 1200px) {
+      @media (max-width: 768px) {
         align-self: flex-end;
       }
-      .filter{
+      .filter {
         padding: 3px;
       }
-      .add{
+      .add {
         font-size: 23px;
         border: 1px solid #707070;
         background-color: #00afd8;
         color: #fff;
         border-radius: 0;
-    padding: 0px 9px;
-    line-height: 27px;
+        padding: 0px 9px;
+        line-height: 27px;
       }
-      img{
+      img {
         width: 18px;
         height: auto;
       }
     }
-    @media (max-width: 1200px) {
+    @media (max-width: 768px) {
       flex-direction: column;
       align-items: start;
     }
@@ -88,25 +87,24 @@ nav.navbar {
     &.border-right-0 {
       border-right: none;
       padding-right: 70px;
-
+      @media (max-width: 768px) {
+        padding-right: 0px;
+      }
     }
-    @media (max-width: 1200px) {
+    @media (max-width: 768px) {
       padding-right: 0px;
     }
-    &:not(:last-child){
+    &:not(:last-child) {
       padding-right: 90px;
     }
-
   }
   .nav-tabs {
-    @media (max-width: 1200px) {
+    @media (max-width: 768px) {
       margin-bottom: 16px;
-      
     }
     .nav-link {
-      @media (max-width: 1200px) {
+      @media (max-width: 768px) {
         width: 100%;
-        
       }
     }
     .nav-link.active {
@@ -114,7 +112,7 @@ nav.navbar {
       border-color: #00afd8;
       color: #fff;
     }
-    @media (max-width: 1200px) {
+    @media (max-width: 768px) {
       flex-direction: column;
       gap: 3px;
       width: 100%;
@@ -164,6 +162,7 @@ nav.navbar {
     margin-bottom: 10px;
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     position: relative;
     &::before {
       content: "";
@@ -173,11 +172,17 @@ nav.navbar {
       top: 0;
       left: 0;
       background-color: #00afd8;
+      @media (max-width: 576px){
+        height: 19px;
+        width: 100%;
+      }
     }
     @media (max-width: 1200px) {
-      flex-direction: column;
-      align-items: start;
-      gap: 20px;
+      // flex-direction: column;
+      gap: 10px;
+    }
+    @media (max-width: 576px){
+      padding-top: 30px;
     }
   }
   .task-info,
@@ -192,6 +197,7 @@ nav.navbar {
     color: #000;
     flex: 1;
     position: relative;
+    min-width: 200px;
     &:not(:first-child)::before {
       content: "";
       position: absolute;
@@ -211,11 +217,20 @@ nav.navbar {
       line-height: 14px;
       color: #aaaaaa;
     }
+    @media (max-width: 576px) {
+      padding: 0;
+    }
   }
   .task-info {
     display: flex;
     flex-direction: column;
     font-size: 16px;
+    .task-name {
+      width: 165px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
     .text-muted {
       font-size: 10px;
       color: #a2a2a2;
@@ -269,19 +284,29 @@ nav.navbar {
   .task-criteria,
   .task-operations {
     color: #000;
-    display: flex;
-    flex-direction: column;
-    .form-group {
-      display: flex;
-      align-items: center;
-      gap: 3px;
+    li{
+      position: relative;
+      padding-left: 15px;
+
+      &::before{
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 2px;
+        width: 12px;
+        height: 12px;
+        background-color: #c5c5c5;
+      }
     }
+
+
     a {
       color: #aaa;
     }
   }
   .task-progress {
     display: flex;
+    flex-wrap: wrap;
     gap: 35px;
     font-size: 10px;
     .bars {
@@ -313,11 +338,6 @@ nav.navbar {
       height: 12px;
       font-size: 10px;
     }
-    @media (max-width: 1200px) {
-      flex-direction: column;
-      align-items: start;
-      gap: 20px;
-    }
   }
   .progress-bar {
     width: 50px;
@@ -347,7 +367,7 @@ nav.navbar {
   border-width: 0px 73px 34px 0px;
   border-style: solid;
   margin-bottom: -1px;
-  @media (max-width: 1200px) {
+  @media (max-width: 768px) {
     display: none;
   }
 }
@@ -373,13 +393,13 @@ footer {
     padding: 4px 7px;
   }
   .page-item {
-    &:first-child{
-      .page-link{
+    &:first-child {
+      .page-link {
         border-radius: 0;
       }
     }
-    &:last-child{
-      .page-link{
+    &:last-child {
+      .page-link {
         border-radius: 0;
       }
     }
